@@ -17,7 +17,9 @@
     "start": "node Scripts/cli.js start",
     "lint": "just-scripts eslint",
     "lint:fix": "eslint ./**/*.js ./**/*.ts ./**/*.tsx --fix",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "disabledTasks": [
     "api-doc",
@@ -55,7 +57,8 @@
     "shelljs": "^0.7.8",
     "username": "^3.0.0",
     "uuid": "^2.0.1",
-    "xml-parser": "^1.2.1"
+    "xml-parser": "^1.2.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^0.0.5",
@@ -76,5 +79,6 @@
   "peerDependencies": {
     "react": "16.8.3",
     "react-native": "^0.59.0 || 0.59.0-microsoft.11 || https://github.com/microsoft/react-native/archive/v0.59.0-microsoft.11.tar.gz"
-  }
+  },
+  "snyk": true
 }
