@@ -16,7 +16,9 @@
   "scripts": {
     "test": "jasmine",
     "lint": "eslint .",
-    "flow-check": "flow check"
+    "flow-check": "flow check",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "Libraries",
@@ -60,7 +62,8 @@
     "shelljs": "^0.7.8",
     "username": "^3.0.0",
     "uuid": "^2.0.1",
-    "xml-parser": "^1.2.1"
+    "xml-parser": "^1.2.1",
+    "snyk": "^1.316.1"
   },
   "rnpm": {
     "haste": {
@@ -73,5 +76,6 @@
     },
     "plugin": "./local-cli/index.js",
     "platform": "./local-cli/platform.js"
-  }
+  },
+  "snyk": true
 }
